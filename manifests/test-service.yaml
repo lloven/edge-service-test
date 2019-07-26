@@ -15,7 +15,7 @@ spec:
         app: edge-service-test
     spec:
       containers:
-      - name: edge-service-test§
+      - name: edge-service-test
         image: registry.hub.docker.com/lloven/edge-service-test:latest
         ports:
         - containerPort: 80
