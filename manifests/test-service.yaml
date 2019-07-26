@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: edge-service-test-deployment
+  labels:
+    app: edge-service-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: edge-service-test
+  template:
+    metadata:
+      labels:
+        app: edge-service-test
+    spec:
+      containers:
+      - name: edge-service-test§
+        image: registry.hub.docker.com/lloven/edge-service-test:latest
+        ports:
+        - containerPort: 80
